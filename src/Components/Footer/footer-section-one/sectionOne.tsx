@@ -28,9 +28,9 @@ const data = [
 const SectionOne = () => {
   return (
     <Container maxWidth="xl">
-      <Grid container spacing={2} sx={{py:'40px'}}>
+      <Grid container spacing={2} sx={{ py: '40px' }}>
         {data.map((item: any, i: number) => (
-          <Grid key={i} item lg={3} md={6} xs={12} style={{ display: "flex", justifyContent: "center",alignItems:'center',gap:'30px' }}>
+          <Grid key={i} item lg={3} md={6} xs={12} style={{ display: "flex", alignItems: 'center', gap: '30px' }}>
             {item.icon}
             <h5 style={styles.text}>{item.title}</h5>
           </Grid>
