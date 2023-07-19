@@ -1,5 +1,5 @@
 import React from 'react'
-import { Avatar, Box, Container } from '@mui/material'
+import {  Box, Container } from '@mui/material'
 import Logo from '../../assests/images/logo.png';
 import Location from './location';
 import Searchbar from './searchbar';

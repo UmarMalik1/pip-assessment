@@ -1,10 +1,13 @@
 import React from 'react'
-import { Grid, Container, Box, Typography, List, ListItem } from '@mui/material'
+import { Grid, Container, Box, Typography, List, ListItem, Button } from '@mui/material'
 import HomeIcon from '@mui/icons-material/Home';
 import CallIcon from '@mui/icons-material/Call';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import Logo from "../../../assests/images/logo.png";
 import { Link } from 'react-router-dom';
+import PlayStoreImg from "../../../assests/playstore.svg"
+import AppStoreImg from "../../../assests/appstore.svg"
+
 
 const data = [
   { logo: Logo },
@@ -72,11 +75,22 @@ const FooterData = {
     },
   ]
 }
+const MyButton = (props: any) => {
+
+  const { img, title } = props;
+  return (
+    <Button >
+      <img src={img} alt={title} />
+      {title}
+    </Button>
+  )
+
+}
 const SectionTwo = () => {
   return (
 
     <Container maxWidth="xl">
-      <Grid container spacing={2}>
+      <Grid container spacing={2} sx={{ py: '30px', borderBottom: '1px dotted grey' }} >
         <Grid item md={3} xs={12}  >
           {FooterData.data.map((obj, i) => (
             <>
@@ -109,7 +123,22 @@ const SectionTwo = () => {
                     ))}
                   </List>}
                   {
-                    obj.contact && <></>
+                    obj.contact && obj.contact.map((item) => (
+                      <Box sx={{ display: 'flex', gap: '10px', py: '10px', borderBottom: '1px dotted grey' }}>
+                        {item.logo}
+                        <Box>
+                          <Typography> {item.text}</Typography>
+                          <Typography> {item.number}</Typography>
+                        </Box>
+                      </Box>
+                    ))
+                  }
+                  {obj.contact &&
+                    <Box sx={{py:'20px'}}>
+                      <Typography>Download App:</Typography>
+                      <MyButton img={PlayStoreImg} />
+                      <MyButton img={AppStoreImg} />
+                    </Box>
                   }
                 </Grid>
               ))
@@ -117,21 +146,14 @@ const SectionTwo = () => {
           </Grid>
         </Grid>
       </Grid>
-      <Grid item md={3} xs={12}>
-        {FooterData.data.map((obj, i) => (
-          <>
-            <Box sx={{ display: 'flex', alignItems: 'center', gap: '10px', py: '5px' }}>
-              {obj.icon}
-              <Typography sx={{ ...styles.text, mb: obj.mb }}>
-                {obj.title}
-              </Typography>
-            </Box>
-          </>
-        ))}
-      </Grid>
+
     </Container>
+
   )
+
 }
+
+
 
 export default SectionTwo
 
@@ -149,4 +171,3 @@ const styles = {
     marginLeft: '13px',
   }
 }
- 

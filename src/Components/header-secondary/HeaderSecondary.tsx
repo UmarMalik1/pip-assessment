@@ -1,9 +1,8 @@
-import { Box, Button, Container, List, ListItem } from '@mui/material'
 import React from 'react'
+import { Box, Button, Container, List, ListItem } from '@mui/material'
 import AllCategories from './all-categories'
 import ExpandMoreOutlinedIcon from '@mui/icons-material/ExpandMoreOutlined';
 import ElectricBoltOutlinedIcon from '@mui/icons-material/ElectricBoltOutlined';
-import { hover } from '@testing-library/user-event/dist/hover';
 
 const data = [
   {

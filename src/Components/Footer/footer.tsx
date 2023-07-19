@@ -9,7 +9,7 @@ const Footer = () => {
     <Box sx={{ backgroundColor: '#F8F8F8', py: '20px' }}>
       <SectionOne />
       <SectionTwo />
-      {/* <SectionThree /> */}
+      <SectionThree />
     </Box>
   )
 }
