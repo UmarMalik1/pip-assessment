@@ -5,6 +5,8 @@ import HeaderPrimary from './Components/header-primary/HeaderPrimary';
 import HeaderSecondary from './Components/header-secondary/HeaderSecondary';
 import Footer from './Components/Footer/footer';
 import { Routes, Route } from 'react-router-dom'
+import OffMenu from './Components/off-menu/offMenu';
+import Sidebar from './Components/side-bar-session/sidebar';
 
 const App: React.FC = () => {
   return (
@@ -13,6 +15,8 @@ const App: React.FC = () => {
       <HeaderPrimary />
       <HeaderSecondary />
       <Infosection />
+      <OffMenu />
+      <Sidebar />
       <Footer />
     </div>
   );
