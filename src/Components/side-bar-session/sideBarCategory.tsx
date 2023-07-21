@@ -11,8 +11,6 @@ import milk from "../../assests/milk.svg"
 import pet from "../../assests/pet.svg"
 import { Box, List, ListItem, Typography } from '@mui/material'
 
-
-
 const sideBar = [
   {
     icon: vegIcon,
@@ -62,6 +60,7 @@ const sideBar = [
   { title: 'Top 50 Offers' },
   { title: 'New Arrivals' },
 ]
+
 const SideBarCategory = () => {
   return (
     <Box sx={{ background: '#F8F8F8' }}>
@@ -71,10 +70,10 @@ const SideBarCategory = () => {
         </Typography>
         {
           sideBar.map((data, i) => (
-            <ListItem key={i} sx={{ gap: '20px', my: '10px', pl: 3,cursor:'pointer' }}>
+            <ListItem key={i} sx={{ gap: '20px', my: '10px', pl: 3, cursor: 'pointer' }}>
               {data.icon && <img src={data.icon} alt='' height={30} width={30} />}
               {data.type && <Typography sx={styles.text}>{data.title}</Typography>}
-              {data.border && <Box sx={{ border: '1px dotted grey', width:'100%' }}></Box>}
+              {data.border && <Box sx={{ border: '1px dotted grey', width: '100%' }}></Box>}
               {!data.type && <Typography sx={styles.text}>{data.title}</Typography>}
             </ListItem>
           ))
@@ -83,8 +82,8 @@ const SideBarCategory = () => {
     </Box>
   )
 }
-
 export default SideBarCategory
-const styles={
-  text:{fontSize:'16px',fontWeight:400,}
+
+const styles = {
+  text: { fontSize: '16px', fontWeight: 400, }
 }

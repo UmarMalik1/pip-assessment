@@ -19,7 +19,7 @@ const Array = [
     title: 'Peanut Butter Bite Premium',
     descr: 'Butter Cookies 600g',
     price: '$26.69',
-    rating: '',
+    rating: 5,
     stock: 'In Stock',
   },
   {

@@ -75,8 +75,8 @@ const FooterData = {
     },
   ]
 }
-const MyButton = (props: any) => {
 
+const MyButton = (props: any) => {
   const { img, title } = props;
   return (
     <Button >
@@ -84,8 +84,8 @@ const MyButton = (props: any) => {
       {title}
     </Button>
   )
-
 }
+
 const SectionTwo = () => {
   return (
 
@@ -101,7 +101,6 @@ const SectionTwo = () => {
                     <Typography sx={{ ...styles.text, mb: obj.mb }}>
                       {obj.title}
                     </Typography>
-
                   </Box>
               }
             </>
@@ -117,8 +116,8 @@ const SectionTwo = () => {
                   <Typography style={styles.heading}>{obj.heading}</Typography>
                   {obj.subLinks && <List>
                     {obj.subLinks?.map((sub, j) => (
-                      <ListItem key={j}>
-                        <Link to={''}> {sub.title}</Link>
+                      <ListItem key={j} >
+                        <Link to={''} style={{ textDecoration: 'none', fontSize: '16px', fontWeight: '400', color: 'grey' }}> {sub.title}</Link>
                       </ListItem>
                     ))}
                   </List>}
@@ -127,14 +126,14 @@ const SectionTwo = () => {
                       <Box sx={{ display: 'flex', gap: '10px', py: '10px', borderBottom: '1px dotted grey' }}>
                         {item.logo}
                         <Box>
-                          <Typography> {item.text}</Typography>
-                          <Typography> {item.number}</Typography>
+                          <Typography sx={{ fontSize: '16px', fontWeight: '400', color: 'grey' }}> {item.text}</Typography>
+                          <Typography sx={{ fontSize: '16px', fontWeight: '600', color: '#545454' }}> {item.number}</Typography>
                         </Box>
                       </Box>
                     ))
                   }
                   {obj.contact &&
-                    <Box sx={{py:'20px'}}>
+                    <Box sx={{ py: '20px' }}>
                       <Typography>Download App:</Typography>
                       <MyButton img={PlayStoreImg} />
                       <MyButton img={AppStoreImg} />
@@ -146,14 +145,9 @@ const SectionTwo = () => {
           </Grid>
         </Grid>
       </Grid>
-
     </Container>
-
   )
-
 }
-
-
 
 export default SectionTwo
 
