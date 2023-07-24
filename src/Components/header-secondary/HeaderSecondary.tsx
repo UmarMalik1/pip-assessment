@@ -54,7 +54,6 @@ const HeaderSecondary = () => {
 
 export default HeaderSecondary
 
-
 const styles = {
   HeaderSecondary: {
     display: 'flex',
@@ -69,6 +68,5 @@ const styles = {
       backgroundColor:'#E6F5F3',
       shadowBox:'none'
     }
-
   }
 }
