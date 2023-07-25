@@ -2,6 +2,10 @@
 import React from 'react'
 import { Box, Button, Card, IconButton, Rating, Typography } from '@mui/material'
 import AddIcon from '@mui/icons-material/Add';
+import VisibilityIcon from '@mui/icons-material/Visibility';
+import SyncIcon from '@mui/icons-material/Sync';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+
 const MenuCard = (props: any) => {
   const {
     id,
@@ -21,9 +25,9 @@ const MenuCard = (props: any) => {
       <Box sx={styles.box}>
         <img src={img} alt={id} height={'140px'} width={"100%"} style={{ objectFit: 'contain' }} />
         <Box sx={styles.shortcut} className='shortcut'>
-          <p>1</p>
-          <p>2</p>
-          <p>3</p>
+          <VisibilityIcon sx={{ color: '#A6ACB5', fontSize: '20px' }} />
+          <SyncIcon sx={{ color: '#A6ACB5', fontSize: '20px' }} />
+          <FavoriteBorderIcon sx={{ color: '#A6ACB5', fontSize: '20px' }} />
         </Box>
       </Box>
       <Box sx={{ padding: '10px' }}>
@@ -57,7 +61,7 @@ const styles = {
     }
   },
   box: { padding: '20px', textAlign: 'center', position: 'relative', overflow: 'hidden' },
-  shortcut: { transition: 'bottom 0.2s linear', background: '#fff', boxShadow: "0px 0px 3px rgba(0,0,0,0.5)", padding: '5px', borderRadius: '5px', position: 'absolute', bottom: '-35px', left: '50%', transform: 'translateX(-20px)', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px' },
+  shortcut: { transition: 'bottom 0.2s linear', background: '#fff', boxShadow: "0px 0px 3px rgba(0,0,0,0.5)", padding: '5px', borderRadius: '5px', position: 'absolute', bottom: '-35px', left: '40%', transform: 'translateX(-20px)', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px' },
   title: { fontSize: '14px', fontWeight: 600, color: '#474747' },
   price: { marginY: '10px', display: 'flex', gap: '15px' },
   newPrice: { color: '#0DA487', fontSize: '15px', fontWeight: 600, },

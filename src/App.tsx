@@ -11,9 +11,9 @@ import Sidebar from './Components/side-bar-session/sidebar';
 const App: React.FC = () => {
   return (
     <div>
-      <Header />
-      <HeaderPrimary />
-      <HeaderSecondary />
+      {/* <Header /> */}
+      {/* <HeaderPrimary /> */}
+      {/* <HeaderSecondary /> */}
       <Infosection />
       <OffMenu />
       <Sidebar />

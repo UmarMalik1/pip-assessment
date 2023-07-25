@@ -10,7 +10,7 @@ const Infosection = () => {
       <Grid container spacing={8}>
         <Grid item lg={8} xs={12} >
           <Box sx={styles.maincart}>
-            <Box sx={{ display: 'flex', gap: '10px' }}>
+            <Box sx={{ display: 'flex', gap: '10px',flexWrap:'wrap' }}>
               <Typography sx={{ color: '#4A5568', fontSize: '14px', fontWeight: '400', mt: '5px' }}>
                 Exclusive Offer
               </Typography>
